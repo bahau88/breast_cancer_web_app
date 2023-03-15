@@ -13,8 +13,6 @@ import tensorflow as tf
 
 from PIL import Image
 
-#https://github.com/datature/resources/blob/main/scripts/inference/tensorflow/bounding_box/model_architecture/retinanet/predict.py
-
 ## Disable unnecessary warnings for tensorflow
 absl.logging.set_verbosity(absl.logging.ERROR)
 ## Comment out next line to use GPU
@@ -79,12 +77,12 @@ def args_parser():
     parser.add_argument(
         "--model",
         help="Path to tensorflow pb model",
-        required=True
+        required=True,
     )
     parser.add_argument(
         "--label",
         help="Path to tensorflow label map",
-        required=True
+        required=True,
     )
     parser.add_argument("--width",
                         help="Width of image to load into model",
